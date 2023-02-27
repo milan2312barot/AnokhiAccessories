@@ -47,7 +47,11 @@ export class AppComponent implements OnInit{
       "categoryId":id,
       "categoryName":name
      }
-     
+
+
+
+
+
     this.categoryService.updateCategory(category).subscribe(data=>{
       if(data){
         this.GetAllCategories();
