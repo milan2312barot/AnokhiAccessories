@@ -86,7 +86,10 @@ namespace AA.Console
             void UpdateCategory(byte id,string name)
             {
             QuickKartRepository repository = new QuickKartRepository();
-            bool result = repository.UpdateCategory(id, name);
+            DAL.Models.Category c = new DAL.Models.Category();
+            c.CategoryId = id;
+            c.CategoryName = name;
+            bool result = repository.UpdateCategory(c);
             if (result) System.Console.WriteLine("Category update successfully");
             else System.Console.WriteLine("Something went wrong while Updating. Try again!");
             }
